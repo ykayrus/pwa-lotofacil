@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Loto+Fácil</title>
+    <link rel="stylesheet" href="style2.css">  <!-- Conecta com .css -->
+    <link rel="manifest" href="manifest.json"> <!-- Conecta com .json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097b2">
+</head>
+<body>
+    
+    <img src="img/loto.png" alt="Loto+Fácil" class="icone"> 
+
+    <div class="retangulo">   <!--Retângulo branco centralizado-->
+        <h3>AVISO IMPORTANTE</h3>
+        <p>Esse é o aplicativo Loto+Fácil, foi criado para aumentar as suas chances de vitória, baseando-se na regra de probabilidade de números já sorteados.</p>
+        <p>Em teoria, existe uma baixa probabilidade de sequências sorteadas se repetirem, e também, baseando-se nos números que mais saíram em determinada data dos sorteios, aumentam suas chances de vitória.</p>
+    </div>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js")
+                .then(() => console.log("Service Worker registrado com sucesso!"))
+                .catch((error) => console.log("Erro ao registrar o Service Worker:", error));
+        }
+    </script>
+    
+</body>
+</html>
