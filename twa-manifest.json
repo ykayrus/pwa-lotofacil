@@ -1,0 +1,42 @@
+{
+  "packageId": "com.github.ykayrus.lotomaisfacil",
+  "host": "ykayrus.github.io/pwa-lotofacil",
+  "name": "LotoMaisFacil",
+  "launcherName": "LotoMFacil",
+  "display": "standalone",
+  "themeColor": "#2196F3",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#7CC0FF",
+  "enableNotifications": true,
+  "startUrl": "/index.html",
+  "iconUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/img/loto.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\APP\\lotofacil\\android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/",
+  "minSdkVersion": 21,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "1"
+}

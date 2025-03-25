@@ -1,0 +1,10 @@
+com.github.ykayrus.lotomaisfacil.app-pngs-0 C:\APP\lotofacil\app\build\generated\res\pngs\release
+com.github.ykayrus.lotomaisfacil.app-resValues-1 C:\APP\lotofacil\app\build\generated\res\resValues\release
+com.github.ykayrus.lotomaisfacil.app-packageReleaseResources-2 C:\APP\lotofacil\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.github.ykayrus.lotomaisfacil.app-packageReleaseResources-3 C:\APP\lotofacil\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.github.ykayrus.lotomaisfacil.app-release-4 C:\APP\lotofacil\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.github.ykayrus.lotomaisfacil.app-main-5 C:\APP\lotofacil\app\src\main\res
+com.github.ykayrus.lotomaisfacil.app-release-6 C:\APP\lotofacil\app\src\release\res
+com.github.ykayrus.lotomaisfacil.app-core-1.1.0-7 C:\Users\andreas\.gradle\caches\8.8\transforms\2144911bb09dce3a07f407e3b390637e\transformed\core-1.1.0\res
+com.github.ykayrus.lotomaisfacil.app-browser-1.4.0-8 C:\Users\andreas\.gradle\caches\8.8\transforms\b511174c15fdde7dea3e957094b4390b\transformed\browser-1.4.0\res
+com.github.ykayrus.lotomaisfacil.app-androidbrowserhelper-2.5.0-9 C:\Users\andreas\.gradle\caches\8.8\transforms\d3335fbdff4200978ad121d7b141def7\transformed\androidbrowserhelper-2.5.0\res
