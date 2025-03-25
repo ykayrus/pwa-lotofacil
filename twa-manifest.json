@@ -12,7 +12,7 @@
   "navigationDividerColorDark": "#000000",
   "backgroundColor": "#7CC0FF",
   "enableNotifications": true,
-  "startUrl": "/index.html",
+  "startUrl": "/",
   "iconUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/img/loto.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
@@ -32,7 +32,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://ykayrus.github.io/",
+  "fullScopeUrl": "https://ykayrus.github.io/pwa-lotofacil/",
   "minSdkVersion": 21,
   "orientation": "portrait",
   "fingerprints": [],

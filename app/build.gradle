@@ -23,7 +23,7 @@ plugins {
 def twaManifest = [
     applicationId: 'com.github.ykayrus.lotomaisfacil',
     hostName: 'ykayrus.github.io/pwa-lotofacil', // The domain being opened in the TWA.
-    launchUrl: '/index.html', // The start path for the TWA. Must be relative to the domain.
+    launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'LotoMaisFacil', // The application name.
     launcherName: 'LotoMFacil', // The name shown on the Android Launcher.
     themeColor: '#2196F3', // The color used for the status bar.
@@ -79,7 +79,7 @@ android {
 
         
             // This is used by Meta Quest.
-            resValue "string", "fullScopeUrl", 'https://ykayrus.github.io/'
+            resValue "string", "fullScopeUrl", 'https://ykayrus.github.io/pwa-lotofacil/'
         
 
         
