@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Números Sorteados</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Referência para o arquivo CSS -->
+</head>
+<body>
+     
+    <<!-- Novo botão fixo no topo -->
+    <button class="botao-topo" onclick="window.location.href='verificar.html'">Clicar Para Verificar Sua Sequência</button>
+    
+    <div class="container">
+        <h2>Buscar Números Favoráveis</h2>
+
+        <label for="concurso">Digite apenas os últimos 2 dígitos (EX: Concurso - 3341):</label>
+        <input type="text" id="concurso" maxlength="2" placeholder="Ex: 41">
+
+        <label for="dia">Dia do sorteio:</label>
+        <input type="text" id="dia" maxlength="2" placeholder="Ex: 13">
+
+        <label for="mes">Mês do sorteio:</label>
+        <input type="text" id="mes" maxlength="2" placeholder="Ex: 03">
+
+        <button id="botao-buscar" onclick="buscarResultados()">Buscar</button>
+
+        <h3>15 Números Mais Frequentes:</h3>
+        <ul id="lista-resultados"></ul>
+         
+    </div>
+
+    <script src="bd.js"></script> <!-- Primeiro carregamos o banco de dados -->
+    <script src="dashboard.js"></script> <!-- Depois carregamos a lógica de busca -->
+</body>
+</html>

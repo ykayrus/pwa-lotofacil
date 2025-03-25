@@ -1,10 +1,11 @@
-/*--------------  Cor de fundo ---------------------------------------------------------------------*/
+/*-------------- Cor de fundo ---------------------------------------------------------------------*/
 body {
     background-color: #0097b2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -34,7 +35,7 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     box-sizing: border-box;
     max-height: 80vh;
     overflow-y: auto;
@@ -49,24 +50,284 @@ body {
     text-align: center;
 }
 
-.retangulo p {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 15px;
+/* ----------------------- Estilo do formulário de busca ---------------------------------------*/
+#busca-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* -----------------------Ajuste para telas pequenas ---------------------------------------*/
+#busca-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+#busca-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid #0097b2;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ----------------------- Estilização do botão de busca ---------------------------------------*/
+#busca-form button {
+    padding: 10px 20px;
+    background-color: #eeff00;
+    border: none;
+    border-radius: 5px;
+    color: rgb(140, 0, 255);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#busca-form button:hover {
+    background-color: #ffe601;
+    transform: scale(1.05);
+}
+
+/* ----------------- Estilização do botão "Ir para o APP" -----------------------*/
+.botao-app {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eeff00;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(140, 0, 255);
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.botao-app button {
+    background: none;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ------------------------------------- Estilo dos números ------------------------------------- */
+.numero {
+    background-color: #fff;
+    border: 2px solid #0097b2;
+    border-radius: 50%;
+    color: #0097b2;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*----------------------------------- Efeito ao passar o mouse sobre os números --------------------- */
+.numero:hover {
+    background-color: #ffe601;
+    color: #b700ff;
+    font-weight: bold;
+}
+
+/* ---------------------- Estilização da lista de resultados ------------------------ */
+#resultados-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas */
+    gap: 10px; /* Espaçamento entre os números */
+    justify-items: center;
+}
+
+/* ----------------------- Ajustes para telas pequenas ---------------------------------------*/
+@media (max-width: 768px) {
+    #resultados-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #resultados-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas muito pequenas */
+    }
+}
+
+#resultados-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resultados-container li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    color: #0097b2;
+}
+
+/* ----------------------- Ajustes para telas pequenas ---------------------------------------*/
 @media (max-width: 600px) {
     .retangulo {
         width: 90%;
         padding: 15px;
     }
+
     .retangulo h3 {
         font-size: 20px;
     }
+
     .retangulo p {
         font-size: 1rem;
     }
+
+    #busca-form input {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    #busca-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* -----------------------------------------------------Estilo do container */
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #d1d1b1;
+}
+
+/* ---------------------------------------------Estilo para a lista de resultados */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------Estilo dos itens da lista */
+li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------Estilo do botão buscar----------------------------------- */
+#botao-buscar {
+    padding: 10px 20px;
+    background-color: #eeff00;
+    border: none;
+    border-radius: 5px;
+    color: rgb(140, 0, 255);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#botao-buscar:hover {
+    background-color: #ffe601;
+    transform: scale(1.05);
+}
+
+/* Estilo do botão fixo no topo */
+.botao-topo {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão */
+    background-color: #eeff00;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(140, 0, 255);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 100; /* Garante que o botão fique por cima de outros elementos */
+}
+
+/* Efeito do botão ao passar o mouse */
+.botao-topo:hover {
+    background-color: #ffe601;
+    transform: translateX(-50%) scale(1.05); /* Aumenta um pouco o botão */
+}
+
+/* Estiliza os números como botões circulares */
+.numero {
+    background-color: #fff;
+    border: 2px solid #0097b2;
+    border-radius: 50%;
+    color: #0097b2;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre os números */
+.numero:hover {
+    background-color: #ffe601;
+    color: #b700ff;
+    font-weight: bold;
+}
+
+/* Quando o número for selecionado */
+.numero-selecionado {
+    background-color: #ffe601;
+    color: #b700ff;
+    font-weight: bold;
+}
+
+/* Estilo do botão "Verificar Sequência" */
+#botao-verificar {
+    padding: 10px 20px;
+    background-color: #eeff00;
+    border: none;
+    border-radius: 5px;
+    color: rgb(140, 0, 255);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#botao-verificar:hover {
+    background-color: #ffe601;
+    transform: scale(1.05);
+}
+
+/* Estilo da área de seleção de números */
+.numeros-selecao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
 }
