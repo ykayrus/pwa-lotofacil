@@ -23,7 +23,7 @@
   "appVersionCode": 1,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/manifest.json",
+  "webManifestUrl": "https://ykayrus.github.io/pwa-lotofacil/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -32,7 +32,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://raw.githubusercontent.com/ykayrus/pwa-lotofacil/master/",
+  "fullScopeUrl": "https://ykayrus.github.io/",
   "minSdkVersion": 21,
   "orientation": "portrait",
   "fingerprints": [],
