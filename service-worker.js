@@ -10,6 +10,7 @@ const urlsToCache = [
 // Instalando o Service Worker e armazenando os arquivos no cache
 self.addEventListener("install", (event) => {
     console.log("[Service Worker] Instalando...");
+    self.skipWaiting(); // Ativa imediatamente
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             console.log("[Service Worker] Arquivos em cache adicionados com sucesso!");
@@ -29,12 +30,13 @@ self.addEventListener("fetch", (event) => {
             console.log("[Service Worker] Buscando da rede:", event.request.url);
             return fetch(event.request).catch(() => {
                 console.warn("[Service Worker] Falha ao buscar da rede:", event.request.url);
+                return caches.match("/index.html"); // Retorna a página principal como fallback
             });
         })
     );
 });
 
-// Atualiza o Service Worker limpando o cache antigo
+// Atualiza o Service Worker limpando o cache antigo e assumindo controle imediato
 self.addEventListener("activate", (event) => {
     console.log("[Service Worker] Ativando...");
     event.waitUntil(
@@ -49,4 +51,5 @@ self.addEventListener("activate", (event) => {
             );
         })
     );
+    self.clients.claim(); // Assume controle imediatamente
 });
